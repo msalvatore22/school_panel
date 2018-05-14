@@ -11,7 +11,8 @@
   </head>
 
   <body>
-
+<nav class="navbar navbar-light bg-light nav-fill">
+<%= link_to "School Tools", root_path %>
 <ul class="nav nav-tabs">
   
   <li class="nav-item dropdown">
@@ -35,6 +36,7 @@
       <%= link_to "All Students", students_path, class: "dropdown_item" %>
   </li>
 </ul>
+</nav>
 
 <%= yield %>
 
