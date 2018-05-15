@@ -12,4 +12,33 @@
  *
  */
 
- @import 'bootstrap'
+ @import 'bootstrap';
+
+ 
+body {
+  background-color: #FEF9F4;
+  color: #FF712D;
+}
+
+a {
+  color: #FF712D;
+}
+
+a:hover {
+  color: #FF712D;
+}
+
+.navbar {
+  background-color: #FEF9F4;
+}
+
+.nav-tabs .nav-item.show .nav-link {
+  color: #FF712D;
+  background-color: #FEF9F4;
+  border-color: #FF712D #FF712D #FF712D;
+}
+
+.dropdown-menu {
+  border-color: #FF712D;
+}
+

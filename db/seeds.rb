@@ -6,4 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Student.create(first_name: "Michael", last_name: "Salvatore", age: 24, highest_completed_education: "College")
+
+
+20.times do |index|
+  Student.create!(first_name: Faker::Name.unique.first_name, last_name: Faker::Name.unique.last_name, age: Faker::Number.between(22, 40), highest_completed_education: "College")
+end
+
+p "Created #{Student.count} students"

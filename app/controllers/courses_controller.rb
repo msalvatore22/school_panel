@@ -11,7 +11,7 @@ class CoursesController < ApplicationController
   end
 
   def edit
-    @courseId = Course.find_by(params[:course_id])
+   
   end
 
   def create
