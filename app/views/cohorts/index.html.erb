@@ -13,11 +13,11 @@
     <tbody>
     <% @cohorts.each do |cohort| %>
       <tr>
-        <th scope="row"><%= teacher.id %></th>
+        <th scope="row"><%= cohort.id %></th>
         <td><%= cohort.name %></d>
         <td><%= cohort.start_date %></td>
         <td><%= cohort.end_date %></td>
       </tr>
+      <% end %>
     </tbody>
   </table>
-<% end %>

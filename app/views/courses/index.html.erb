@@ -11,10 +11,10 @@
     <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <th scope="row"><%= teacher.id %></th>
+        <th scope="row"><%= course.id %></th>
         <td><%= course.name %></d>
         <td><%= course.total_in_class_hours %></td>
       </tr>
+      <% end %>
     </tbody>
   </table>
-<% end %>
