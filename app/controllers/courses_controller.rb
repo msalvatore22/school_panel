@@ -9,6 +9,7 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    @cohorts = Cohort.all
   end
 
   def edit
@@ -44,6 +45,6 @@ class CoursesController < ApplicationController
   private
 
   def courses_params
-    params.require(:courses).permit(:name, :total_in_class_hours)
+    params.require(:course).permit(:name, :total_in_class_hours)
   end
 end

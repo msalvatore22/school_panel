@@ -6,6 +6,9 @@ ruby '2.4.1'
 
 gem 'bootstrap', '~> 4.0'
 gem 'bootstrap-sass', '~> 3.3.7'
+gem 'bootstrap_form',
+git: "https://github.com/bootstrap-ruby/bootstrap_form.git",
+    branch: "master"
 gem 'jquery-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'
 
