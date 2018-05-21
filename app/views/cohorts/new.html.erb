@@ -1,1 +1,8 @@
+<%= bootstrap_form_with(model: @cohort, local: true) do |f| %>
+<%= f.text_field :name, label: "Name:" %>
+<%= f.date_field :start_date %>
+<%= f.date_field :end_date %>
+<%= f.collection_select(:course_id, Course.all, :id, :name) %>
+<%= f.submit "Create Cohort" %>
+<% end %>
 

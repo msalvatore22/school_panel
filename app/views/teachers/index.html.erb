@@ -8,6 +8,9 @@
         <th scope="col">Age</th>
         <th scope="col">Salary</th>
         <th scope="col">Highest Completed Education</th>
+        <th scope="col">Show</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -19,6 +22,9 @@
         <td><%= teacher.age %></td>
         <td><%= teacher.salary %></td>
         <td><%= teacher.highest_completed_education %></td>
+        <td><%= link_to "Show Teacher", teacher %></td>
+        <td><%= link_to "Edit Teacher", edit_teacher_path(teacher) %></td>
+        <td> delete </td>
       <% end %>
       </tr>
     </tbody>
