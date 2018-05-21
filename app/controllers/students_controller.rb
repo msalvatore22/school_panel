@@ -16,7 +16,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(students_params)
+    @student = Student.new(student_params)
 
     if @student.save
       redirect_to :action => 'index'
@@ -44,7 +44,7 @@ class StudentsController < ApplicationController
 
   private
 
-  def students_params
+  def student_params
     params.require(:student).permit(:first_name, :last_name, :age, :highest_completed_education)
   end
 end

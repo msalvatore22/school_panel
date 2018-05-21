@@ -16,7 +16,7 @@ class TeachersController < ApplicationController
   end
 
   def create
-    @teacher = Teacher.new(teachers_params)
+    @teacher = Teacher.new(teacher_params)
 
     if @teacher.save
       redirect_to :action => 'index'
@@ -41,7 +41,7 @@ class TeachersController < ApplicationController
     redirect_to :action => 'index'
   end
 
-  def teachers_params
+  def teacher_params
     params.require(:teacher).permit(:first_name, :last_name, :age, :salary, :highest_completed_education)
   end
 end

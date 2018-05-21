@@ -16,7 +16,7 @@ class CohortsController < ApplicationController
   end
 
   def create
-    @cohort = Cohort.new(cohorts_params)
+    @cohort = Cohort.new(cohort_params)
 
     if @cohort.save
       redirect_to :action => 'index'
@@ -44,8 +44,9 @@ class CohortsController < ApplicationController
 
   private
 
-  def cohorts_params
+  def cohort_params
     params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
   end
+
 
 end

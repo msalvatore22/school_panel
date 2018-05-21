@@ -17,7 +17,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(courses_params)
+    @course = Course.new(course_params)
 
     if @course.save
       redirect_to :action => 'index'
@@ -44,7 +44,7 @@ class CoursesController < ApplicationController
 
   private
 
-  def courses_params
+  def course_params
     params.require(:course).permit(:name, :total_in_class_hours)
   end
 end
