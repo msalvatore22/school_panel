@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get "homes/index"
   root "homes#index"
+  resources :teacher_cohorts
+  resources :student_cohorts
   resources :students
   resources :teachers
   resources :courses

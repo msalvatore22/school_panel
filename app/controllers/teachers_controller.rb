@@ -27,7 +27,7 @@ class TeachersController < ApplicationController
   end
 
   def update
-    @teacher = Reacher.find(params[:id])
+    @teacher = Teacher.find(params[:id])
 	
    if @teacher.update_attributes(teacher_params)
       redirect_to :action => 'show', :id => @teacher

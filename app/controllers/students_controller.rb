@@ -5,20 +5,21 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
-    
   end
 
   def new
     @student = Student.new
+    @cohorts = Cohort.all
+    
   end
 
   def edit
     @student = Student.find(params[:id])
+    @cohorts = Cohort.all
   end
 
   def create
     @student = Student.new(student_params)
-    @student_cohort = StudentCohort.create(cohort_id: params[:cohort_id], student_id: params[:student_id])
 
     if @student.save
       redirect_to :action => 'index'
@@ -43,6 +44,22 @@ class StudentsController < ApplicationController
     Student.find(params[:id]).destroy
     redirect_to :action => 'index'
   end
+
+  def add_cohort
+    student_cohort = StudentCohort.new(
+      student_id: params[:student_id],
+      cohort_id: params[:cohort_id]
+    )
+
+    if student_cohort.save
+      flash[:info] = "Everything good"
+    else
+      flash[:error] = "Everything bad"
+    end
+
+    redirect_to edit_student_path(params[:student_id])
+  end
+
 
   private
 

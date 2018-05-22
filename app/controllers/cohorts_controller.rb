@@ -13,9 +13,21 @@ class CohortsController < ApplicationController
 
   def edit
     @cohort = Cohort.find(params[:id])
+
+    @student_cohort_remove = StudentCohort.find_by(cohort_id: params[:id])
+    if TeacherCohort.find_by(cohort_id: params[:id])
+      @teacher_cohort = TeacherCohort.find_by(cohort_id: params[:id])
+    else 
+      @teacher_cohort = TeacherCohort.new
+    end
+    @student_cohort = StudentCohort.new
   end
 
   def create
+    @cohort_teacher = TeacherCohort.new
+    @cohort_student = StudentCohort.new
+
+
     @cohort = Cohort.new(cohort_params)
 
     if @cohort.save
@@ -48,5 +60,6 @@ class CohortsController < ApplicationController
     params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
   end
 
+  
 
 end
