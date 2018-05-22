@@ -1,2 +1,11 @@
-<h1>Teacher#show</h1>
-<p>Find me in app/views/teacher/show.html.erb</p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @teacher.first_name %> <%= @teacher.last_name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Age: <%= @teacher.age %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Salary: <%= @teacher.salary %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Highest Completed Education: <%= @teacher.highest_completed_education %></h6>
+    
+    <%= link_to "Edit Teacher", edit_student_path(@teacher), class: "card-link" %>
+    <a href="#" class="card-link">delete</a>
+  </div>
+</div>

@@ -1,9 +1,11 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title"><%= @student.first_name %> <%= @student.last_name %></h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <h6 class="card-subtitle mb-2 text-muted">Age: <%= @student.age %></h6>
+    <h6 class="card-subtitle mb-2 text-muted">Highest Completed Education: <%= @student.highest_completed_education %></h6>
+    
+   
+    <%= link_to "Edit Student", edit_student_path(@student), class: "card-link" %>
+    <a href="#" class="card-link">delete</a>
   </div>
 </div>

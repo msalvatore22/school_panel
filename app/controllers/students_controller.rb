@@ -5,6 +5,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = Student.find(params[:id])
+    
   end
 
   def new
@@ -17,6 +18,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
+    @student_cohort = StudentCohort.create(cohort_id: params[:cohort_id], student_id: params[:student_id])
 
     if @student.save
       redirect_to :action => 'index'
