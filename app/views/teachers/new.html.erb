@@ -4,6 +4,5 @@
 <%= f.number_field :age, label: "Age:" %>
 <%= f.number_field :salary, label: "Salary:" %>
 <%= f.text_field :highest_completed_education, label: "Highest Completed Education:" %>
-<%= f.collection_select(:cohort_id, Cohort.all, :id, :name) %>
 <%= f.submit "Create Teacher" %>
 <% end %>
