@@ -12,39 +12,39 @@
   </head>
 
   <body>
-<nav class="navbar navbar-light nav-fill border-bottom">
-<%= link_to image_tag("toolkit.png"), root_path %> <h1> School Tools </h1>
-<ul class="nav nav-tabs">
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
-  <div class="dropdown-menu">
-      <%= link_to "All Courses", courses_path, class: "dropdown_item" %>
-  <div class="dropdown-divider"></div>
-      <%= link_to "Create Course", new_course_path, class: "dropdown_item" %>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cohorts</a>
-  <div class="dropdown-menu">
-    <%= link_to "All Cohorts", cohorts_path, class: "dropdown_item" %>
-  <div class="dropdown-divider"></div>
-      <%= link_to "Create Cohort", new_cohort_path, class: "dropdown_item" %>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Teachers</a>
-  <div class="dropdown-menu">
-      <%= link_to "All Teachers", teachers_path, class: "dropdown_item" %>
-  <div class="dropdown-divider"></div>
-      <%= link_to "Create Teacher", new_teacher_path, class: "dropdown_item" %>
-  </li>
-  <li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Students</a>
-    <div class="dropdown-menu">
-      <%= link_to "All Students", students_path, class: "dropdown_item" %>
-  <div class="dropdown-divider"></div>
-      <%= link_to "Create Student", new_student_path, class: "dropdown_item" %>
-  </li>
-</ul>
-</nav>
+    <nav class="navbar navbar-light nav-fill border-bottom">
+      <%= link_to image_tag("toolkit.png"), root_path %> <h1> School Tools </h1>
+        <ul class="nav nav-tabs">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Courses</a>
+          <div class="dropdown-menu">
+              <%= link_to "All Courses", courses_path, class: "dropdown_item" %>
+          <div class="dropdown-divider"></div>
+              <%= link_to "Create Course", new_course_path, class: "dropdown_item" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cohorts</a>
+          <div class="dropdown-menu">
+            <%= link_to "All Cohorts", cohorts_path, class: "dropdown_item" %>
+          <div class="dropdown-divider"></div>
+              <%= link_to "Create Cohort", new_cohort_path, class: "dropdown_item" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Teachers</a>
+          <div class="dropdown-menu">
+              <%= link_to "All Teachers", teachers_path, class: "dropdown_item" %>
+          <div class="dropdown-divider"></div>
+              <%= link_to "Create Teacher", new_teacher_path, class: "dropdown_item" %>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Students</a>
+            <div class="dropdown-menu">
+              <%= link_to "All Students", students_path, class: "dropdown_item" %>
+          <div class="dropdown-divider"></div>
+              <%= link_to "Create Student", new_student_path, class: "dropdown_item" %>
+          </li>
+        </ul>
+    </nav>
 
 <%= yield %>
 

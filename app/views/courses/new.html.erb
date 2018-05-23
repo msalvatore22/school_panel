@@ -1,5 +1,5 @@
 <%= bootstrap_form_with(model: @course, local: true) do |f| %>
   <%= f.text_field :name, label: "Name:" %>
-  <%= f.text_field :total_in_class_hours, label: "Total hours in class:"  %>
+  <%= f.number_field :total_in_class_hours, label: "Total hours in class:"  %>
   <%= f.submit "Create Course" %>
 <% end %>

@@ -1,8 +1,8 @@
 <%= bootstrap_form_with(model: @teacher, local: true) do |f| %>
 <%= f.text_field :first_name, label: "First Name:" %>
 <%= f.text_field :first_name, label: "First Name:" %>
-<%= f.number_field :age, label: "Age:" %>
-<%= f.number_field :salary, label: "Salary:" %>
-<%= f.text_field :highest_completed_education, label: "Highest Completed Education:" %>
+<%= f.select :age, (20..72), label: "Age:" %>
+<%= f.select :salary, [50000, 55000, 60000, 65000, 75000], label: "Salary:" %>
+<%= f.select :highest_completed_education, ["high-school", "college", "masters", "PhD"], label: "Highest Completed Education:" %>
 <%= f.submit "Create Teacher" %>
 <% end %>
