@@ -6,18 +6,18 @@ class StudentCohortsController < ApplicationController
   def update
     @student_cohort = StudentCohort.find(params[:id])
 	
-   if @student_cohort.update_attributes(student_params)
-      redirect_to :action => 'show', :id => @student
+   if @student_cohort.update_attributes(student_cohort_params)
+      redirect_to cohorts_url
    else
       render :action => 'edit'
    end
   end
 
   def create
-    @student_cohort = StudentCohort.new(student_params)
+    @student_cohort = StudentCohort.new(student_cohort_params)
 
     if @student_cohort.save
-      redirect_to :action => 'index'
+      redirect_to cohorts_url 
     else
       render :action => 'new'
     end
@@ -25,7 +25,7 @@ class StudentCohortsController < ApplicationController
 
   def destroy
     studentCohort.find(params[:id]).destroy
-    redirect_to :action => 'index'
+    redirect_to cohorts_url 
   end
 
   def student_cohort_params

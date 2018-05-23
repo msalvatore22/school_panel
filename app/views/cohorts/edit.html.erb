@@ -9,5 +9,11 @@
 <%= bootstrap_form_for(@teacher_cohort) do |f| %>
   <%= f.collection_select(:teacher_id, Teacher.all, :id, :first_name) %>
   <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
-  <%= f.submit "Add cohort" %>
+  <%= f.submit "Add to cohort" %>
+<% end %>
+
+<%= bootstrap_form_for(@student_cohort) do |f| %>
+  <%= f.collection_select(:student_id, Student.all, :id, :first_name) %>
+  <%= f.hidden_field(:cohort_id, value: "#{@cohort.id}") %>
+  <%= f.submit "Add to cohort" %>
 <% end %>

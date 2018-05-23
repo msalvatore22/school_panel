@@ -5,6 +5,7 @@ class CohortsController < ApplicationController
 
   def show
     @cohort = Cohort.find(params[:id])
+
   end
 
   def new
@@ -20,7 +21,13 @@ class CohortsController < ApplicationController
     else 
       @teacher_cohort = TeacherCohort.new
     end
-    @student_cohort = StudentCohort.new
+
+    if StudentCohort.find_by(cohort_id: params[:id])
+      @student_cohort = StudentCohort.find_by(cohort_id: params[:id])
+    else 
+      @student_cohort = StudentCohort.new
+    end
+    
   end
 
   def create
@@ -60,6 +67,6 @@ class CohortsController < ApplicationController
     params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
   end
 
-  
+
 
 end
