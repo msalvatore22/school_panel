@@ -31,8 +31,6 @@ class CohortsController < ApplicationController
   end
 
   def create
-    @cohort_teacher = TeacherCohort.new
-    @cohort_student = StudentCohort.new
 
 
     @cohort = Cohort.new(cohort_params)
@@ -66,7 +64,5 @@ class CohortsController < ApplicationController
   def cohort_params
     params.require(:cohort).permit(:name, :start_date, :end_date, :course_id)
   end
-
-
 
 end

@@ -28,6 +28,8 @@ class StudentCohortsController < ApplicationController
     redirect_to cohorts_url 
   end
 
+private
+
   def student_cohort_params
     params.require(:student_cohort).permit(:student_id, :cohort_id)
   end
