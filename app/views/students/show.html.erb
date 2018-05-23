@@ -3,6 +3,7 @@
     <h5 class="card-title"><%= @student.first_name %> <%= @student.last_name %></h5>
     <h6 class="card-subtitle mb-2 text-muted">Age: <%= @student.age %></h6>
     <h6 class="card-subtitle mb-2 text-muted">Highest Completed Education: <%= @student.highest_completed_education %></h6>
+    <h5 class="card-title">Cohorts</h5>
     <% @student.cohorts.each do |cohort| %>
     <p class="card-text"><%= cohort.id %>. <%= cohort.name %></p>
     <% end %>
