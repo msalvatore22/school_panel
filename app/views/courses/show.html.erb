@@ -5,7 +5,14 @@
     <h5 class="card-title">Cohorts</h5>
     <% @course.cohorts.each do |cohort| %>
     <p class="card-text"><%= cohort.id %>. <%= cohort.name %></p>
-    <% end %>
+      <% if @course.students %>
+      <% @course.students.each do |student| %>
+      <p class="card-text"><%= student.first_name %>  <%= student.last_name %></p>
+      <% end %>
+      <% else %>
+        <p class="card-text">No students belong to this cohort</p>
+      <% end %>
+    <% end %> 
     <%= link_to "Edit course", edit_course_path(@course), class: "card-link" %>
   </div>
 </div>
