@@ -20,7 +20,7 @@
         <td><%= cohort.end_date %></td>
         <td><%= link_to "Show Cohort", cohort %></td>
         <td><%= link_to "Edit Cohort", edit_cohort_path(cohort) %></td>
-        <td> delete </td>
+        <td><%= link_to "Delete Cohort", cohort, method: :delete %></td>
       </tr>
       <% end %>
     </tbody>

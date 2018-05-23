@@ -24,7 +24,7 @@
         <td><%= teacher.highest_completed_education %></td>
         <td><%= link_to "Show Teacher", teacher %></td>
         <td><%= link_to "Edit Teacher", edit_teacher_path(teacher) %></td>
-        <td> delete </td>
+        <td><%= link_to "Delete Teacher", teacher, method: :delete %></td>
       <% end %>
       </tr>
     </tbody>
