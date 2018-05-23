@@ -5,9 +5,8 @@
     <h6 class="card-subtitle mb-2 text-muted">Salary: <%= @teacher.salary %></h6>
     <h6 class="card-subtitle mb-2 text-muted">Highest Completed Education: <%= @teacher.highest_completed_education %></h6>
     <% @teacher.cohorts.each do |cohort| %>
-    <p class="card-text"><%= cohort.name %></p>
+    <p class="card-text"><%= cohort.id %>. <%= cohort.name %></p>
     <% end %>
     <%= link_to "Edit Teacher", edit_student_path(@teacher), class: "card-link" %>
-    <a href="#" class="card-link">delete</a>
   </div>
 </div>

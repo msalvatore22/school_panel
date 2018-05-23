@@ -16,6 +16,8 @@ class CohortsController < ApplicationController
     @cohort = Cohort.find(params[:id])
 
     @student_cohort_remove = StudentCohort.find_by(cohort_id: params[:id])
+    @teacher_cohort_remove = StudentCohort.find_by(cohort_id: params[:id])
+    
     if TeacherCohort.find_by(cohort_id: params[:id])
       @teacher_cohort = TeacherCohort.find_by(cohort_id: params[:id])
     else 
@@ -27,6 +29,7 @@ class CohortsController < ApplicationController
     else 
       @student_cohort = StudentCohort.new
     end
+
     
   end
 

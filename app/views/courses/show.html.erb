@@ -1,2 +1,11 @@
-<h1>Course#show</h1>
-<p>Find me in app/views/course/show.html.erb</p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @course.name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted">Hours In Class: <%= @course.total_in_class_hours %></h6>
+    <h5 class="card-title">Cohorts</h5>
+    <% @course.cohorts.each do |cohort| %>
+    <p class="card-text"><%= cohort.id %>. <%= cohort.name %></p>
+    <% end %>
+    <%= link_to "Edit course", edit_course_path(@course), class: "card-link" %>
+  </div>
+</div>
