@@ -3,7 +3,7 @@ class Student < ApplicationRecord
   has_many :cohorts, through: :student_cohorts
 
   def student_full_name
-    "#{@student.first_name} #{@student.last_name}"
+    "#{first_name} #{last_name}"
   end
   
 end

@@ -3,6 +3,10 @@
     <h5 class="card-title"><%= @cohort.name %></h5>
     <h6 class="card-subtitle mb-2 text-muted">Start Date: <%= @cohort.start_date %></h6>
     <h6 class="card-subtitle mb-2 text-muted">End Date: <%= @cohort.end_date %></h6>
+    <h5 class="card-title">Teachers</h5>
+    <% @cohort.teachers.each do |teacher| %>
+    <p class="card-text"><%= teacher.id %>. <%= teacher.first_name %> <%= teacher.last_name %></p>
+    <% end %>
     <h5 class="card-title">Students</h5>
     <% @cohort.students.each do |student| %>
     <p class="card-text"><%= student.id %>. <%= student.first_name %> <%= student.last_name %></p>

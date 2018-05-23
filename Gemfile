@@ -11,6 +11,7 @@ git: "https://github.com/bootstrap-ruby/bootstrap_form.git",
     branch: "master"
 gem 'jquery-rails'
 gem 'faker', '~> 1.6', '>= 1.6.6'
+gem "sentry-raven"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'

@@ -4,14 +4,7 @@
     <h6 class="card-subtitle mb-2 text-muted">Hours In Class: <%= @course.total_in_class_hours %></h6>
     <h5 class="card-title">Cohorts</h5>
     <% @course.cohorts.each do |cohort| %>
-    <p class="card-text"><%= cohort.id %>. <%= cohort.name %></p>
-      <% if @course.students %>
-      <% @course.students.each do |student| %>
-      <p class="card-text"><%= student.first_name %>  <%= student.last_name %></p>
-      <% end %>
-      <% else %>
-        <p class="card-text">No students belong to this cohort</p>
-      <% end %>
+    <p class="card-text"><%= cohort.id %>. <%= link_to "#{cohort.name}", cohort_path(cohort.id) %> </p>
     <% end %> 
     <%= link_to "Edit course", edit_course_path(@course), class: "card-link" %>
   </div>
