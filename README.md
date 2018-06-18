@@ -1,24 +1,16 @@
-# README
+# Admin Panel
+## This is an admin panel for any type of school. You can create courses, cohorts for those courses, and then add teachers and students to the cohorts.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Tools Used:
+* CSS
+* Javascript
+* Ruby on Rails
+* Active Record
+* Sqlite3
+* Postgres
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features:
+* Ability to CRUD courses, cohorts, teachers and students.
+* Ability to add multiple teachers to cohorts.
+* Ability to add multiple students to cohorts.
